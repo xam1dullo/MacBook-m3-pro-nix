@@ -40,8 +40,6 @@
     
     # Productivity
     pkgs.obsidian
-    pkgs.notion
-    pkgs.anki
     
     # Utilities
     pkgs.bat
