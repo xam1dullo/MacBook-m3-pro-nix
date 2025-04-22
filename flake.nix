@@ -61,31 +61,41 @@
 					# sublime4
         ];
 
+homebrew = {
+  enable = true;
+  brews = [
+    "mas"
+  ];
+  casks = [
+    "firefox"
+    "iina"
+    "hammerspoon"
+    "zen-browser"
+    "raycast"
+    "the-unarchiver"
+    "obs"
+    "vlc"
+    "flameshot"
+    "termius"
+    "zed"
+    "notion"
+    "anki"
+  ];
+  masApps = {
+    # your Mac App Store apps here if needed
+  };
+  onActivation = {
+    cleanup = "zap";
+    # Remove any flags that might be causing issues
+    autoUpdate = true; # This will update Homebrew before running bundle
+    upgrade = true;    # This will upgrade existing packages
+  };
+  # The following line is crucial for fixing the --no-lock issue
+  global = {
+    brewfile = true;  # Use global Brewfile settings
+  };
+};
 
-    homebrew = {
-        enable = true;
-        brews = [
-          "mas"
-        ];
-        casks = [
-            "firefox"
-            "iina"
-           	"hammerspoon"
-    				"zen-browser"
-    				"raycast"
-    				"the-unarchiver"
-    				"obs"
-    				"vlc"
-            "flameshot"
-            "termius"
-    				"zed"
-    				"notion"
-    				"anki"
-        ];
-        masApps = {
-        };
-        onActivation.cleanup = "zap";
-    };
 
 
       fonts.packages = [
